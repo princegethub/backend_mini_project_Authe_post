@@ -20,7 +20,11 @@ let userSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId ,
       ref : "post"
     }
-  ]
+  ] ,
+  profilepic : {
+    type:String,
+    default: "deflaut.png"
+  }
 });
 
 module.exports = mongoose.model("user", userSchema);
